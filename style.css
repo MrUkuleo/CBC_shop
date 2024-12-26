@@ -1,0 +1,608 @@
+/* База */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#btn-type1 {
+    background-color: rgb(224, 166, 6);
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#btn-type1:hover {
+    background-color: darkblue;
+}
+
+#btn-type2 {
+    border-color: rgb(224, 166, 6);
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn-type2:hover {
+    background-color: rgb(224, 166, 6);
+}
+
+
+/* Заголовок */
+header {
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.content-box {
+    display: flex;
+}
+
+.content-box img {
+    padding-right: 25px;
+}
+
+.sboku-ot-logo {
+    flex-grow: 1;
+}
+
+#links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#links li {
+    display: inline;
+}
+
+#links a {
+    color: #707070;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.midheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#slogan {
+    max-width: 350px;
+    color: #707070;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#phone {
+    font-size: 18px;
+    color: #707070;
+    font-weight: bold;
+}
+
+#bottomheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search {
+    padding: 5px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    width: 400px;
+    height: 25px;
+    font-size: 14px;
+}
+
+#bottomheader a {
+    color: #707070;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+#bottomheader p {
+    margin: 0;
+    font-size: 14px;
+    color: #707070;
+}
+
+#address {
+    max-width: 115px;
+    text-align: justify;
+}
+
+.title {
+    text-align: left;
+    max-width: 500px;
+    font-size: 23px;
+}
+
+/* Меню */
+.menu {
+    width: 448px;
+    background-color: rgb(255, 237, 237);
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box; 
+    border-radius: 8px;
+}
+
+.menu h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li > button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #707070;
+    background-color: white;
+    font-size: 16px;
+    padding: 8px 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrow {
+    color: blue;
+    margin-left: auto; 
+    display: inline-block;
+}
+
+.menu li > button:hover {
+    background-color: lightgray;
+}
+
+.menu li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 15px;
+    display: none;
+}
+
+.menu li ul li {
+    padding: 5px 0;
+}
+
+.menu li ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.menu li ul li a:hover {
+    color: #007bff;
+}
+
+
+/* Слайд-шоу */
+.slideshow-container {
+    position: relative;
+    margin-left: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    flex: 1;
+    width: 800px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 5%, rgba(0, 0, 0, 0.7) 95%);
+    border-radius: inherit;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    color: white;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.slide button {
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    transform: translate(-10%, -50%);
+    color: white;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: darkblue;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #707070;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+    transform: translateY(-200%);
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: orange;
+    border-color: orange;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Плитки */
+.tile {
+    width: 290px;
+    height: 200px;
+    text-align: center;
+    color: #707070;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 1px;
+    box-shadow: 0px 0px 4px black;
+}
+
+.tile-double {
+    width: 580px;
+    height: 200px;
+    text-align: center;
+    color: #707070;    
+    border-style: groove;
+    display: inline-block;
+    margin: 1px;
+    vertical-align: top;
+}
+
+.goods-images {
+    width: 25%;
+    max-height: 50%;
+}
+
+.icon-double {
+    margin-top: 5px;
+}
+
+.tile h2 {
+    margin-top: 40px;
+}
+
+.tiles img {
+    margin-top: 15px;
+    width: 15%;
+}
+
+.tiles h3 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.arrow-tile {
+    font-size: 24px;
+    margin-top: 25px;
+    margin-left: 250px;
+}
+
+.icons-button {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color: #F0F0FF;
+}
+
+.icons img {
+    display: inline-block;
+    width: 70%;
+    margin-right: 1px;
+}
+
+.icons figure{
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    margin-right: 1px;
+    vertical-align: top;
+}
+
+.brands img {
+    display: inline-block;
+    width: 9%; 
+    height: 9%;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-top:0%;
+}
+
+/* Блоки */
+.blocks {
+    display: inline-flex;
+    margin-top: 100px;
+}
+
+.block {
+    background-color: #E3E1FF;
+    width: 579px;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.block img {
+    max-width: 400px;
+}
+
+.block h3 {
+    text-align: right;
+    margin-right: 25px;
+}
+
+.block p {
+    text-align: right;
+    width: 300px;
+    margin-left: 260px;
+}
+
+.block button {
+    margin-left: 365px;
+}
+
+.ya-hz-kak-eto-nazvat {
+    display: inline-flex;
+    margin-top: 50px;
+    background-color: #F0F0FF;
+}
+
+.ya-hz-kak-eto-nazvat h3, p {
+    max-width: 400px;
+}
+
+.ya-hz-kak-eto-nazvat img {
+    margin-left: 350px;
+    width: 30%;
+}
+
+.button-text {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.button-text button {
+    margin-left: 500px;
+    height: 50px;
+
+}
+
+.believe-us {
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.believe-us h3 {
+    max-width: 420px;
+}
+
+.images img{
+    width: 15%;
+    height: 15%;
+    vertical-align: middle;
+    margin-right: 45px;
+}
+
+/* Запись на консультацию*/
+.consultation {
+    padding-top: 50px;
+    display: block;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.consultation h3, 
+.consultation h4 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.consult-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px #333;
+}
+
+.face {
+    width: 100%;
+    height: auto;
+    transform: scale(-1, 1);
+}
+
+.eyes {
+    width: 4.5%;
+    position: absolute;
+    left: 41.1%;
+    top: 457.9%;
+}
+
+.lips {
+    width: 2%;
+    position: absolute;
+    left: 42.3%;
+    top: 462.7%;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+}
+
+.registration-form input {
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    border-color: #333;
+    margin-bottom: 15px;
+    font-size: 14px;
+    width: 330px;
+    height: 80px;
+    font-size: 14px;
+}
+
+/* Карта */
+.map {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.map h3 {
+    max-width: 400px;
+    margin-left: 300px;
+}
+
+.map ul {
+    text-align: left;
+    list-style-type: none;
+    padding-right: 50px;
+    vertical-align: middle;
+    margin-top: 55px;
+}
+
+.map li {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.map li img {
+    margin-right: 10px;
+}
+
+.map img {
+    width: 5%;
+}
+
+.open-map {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Футер */
+footer {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.icon-footer {
+    width: 15%;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 50px;
+}
