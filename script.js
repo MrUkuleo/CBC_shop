@@ -44,17 +44,46 @@ function resetSlideTimer()
 }
 
 // Прокрутка товаров
-let scrollHorizontal = document.querySelector('.slider-container')
-let rightBytton = document.getElementById('right-btn')
-let leftBytton = document.getElementById('left-btn')
+// let scrollHorizontal = document.querySelector('.slider-container')
+// let rightBytton = document.getElementById('right-btn')
+// let leftBytton = document.getElementById('left-btn')
 
-rightBytton.addEventListener('click', ()=> {
-    scrollHorizontal.scrollLeft += 1000;
+// rightBytton.addEventListener('click', ()=> {
+//     scrollHorizontal.scrollLeft += 1000;
+// });
+
+// leftBytton.addEventListener('click', ()=> {
+//     scrollHorizontal.scrollLeft -= 1000;
+// });
+
+// JavaScript для управления слайдером
+const slider = document.querySelector('.slider'); // Контейнер с карточками
+let currentScrollPosition = 0; // Текущая позиция прокрутки
+const cardWidth = document.querySelector('.product-card').offsetWidth + 20; // Ширина карточки + отступ
+
+function scrollSlider(direction) {
+    const visibleWidth = document.querySelector('.slider-container').offsetWidth; // Ширина видимой области
+    const maxScrollPosition = Math.max(slider.scrollWidth - visibleWidth, 0); // Максимальная позиция прокрутки
+
+    // Обновляем текущую позицию прокрутки
+    currentScrollPosition += direction * cardWidth;
+
+    // Проверяем границы
+    currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScrollPosition));
+
+    // Прокручиваем слайдер
+    slider.style.transform = `translateX(-${currentScrollPosition}px)`;
+
+    // Лог для отладки
+    console.log({ currentScrollPosition, visibleWidth, maxScrollPosition });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Убедитесь, что код работает после загрузки DOM
+    console.log('Скрипт подключен и работает');
 });
 
-leftBytton.addEventListener('click', ()=> {
-    scrollHorizontal.scrollLeft -= 1000;
-});
+
 
 // Проверка корректности ввода данных
 var inputs = ['name', 'phone-number', 'question'];
