@@ -44,11 +44,17 @@ function resetSlideTimer()
 }
 
 // Прокрутка товаров
+let scrollHorizontal = document.querySelector('.slider-container')
+let rightBytton = document.getElementById('right-btn')
+let leftBytton = document.getElementById('left-btn')
 
-function scrollSlider(direction) 
-{
-    alert('Хуй');
-}
+rightBytton.addEventListener('click', ()=> {
+    scrollHorizontal.scrollLeft += 1000;
+});
+
+leftBytton.addEventListener('click', ()=> {
+    scrollHorizontal.scrollLeft -= 1000;
+});
 
 // Проверка корректности ввода данных
 var inputs = ['name', 'phone-number', 'question'];

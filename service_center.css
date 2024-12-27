@@ -334,6 +334,8 @@ header {
     overflow: hidden;
     width: 90%;
     margin: 0 auto;
+    overflow-x: scroll;
+
 }
 
 .slider-title {
@@ -356,9 +358,7 @@ header {
 
 .slider {
     display: inline-flex;
-    transition: transform 0.3s ease-in-out;
 }
-
 
 .product-card {
     border: 1px solid #333;
