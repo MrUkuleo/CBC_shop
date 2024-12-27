@@ -319,6 +319,25 @@ header {
     display: inline-flex;
 }
 
+/**/
+.text-cards {
+}
+
+
+.card-title {
+    display: flex;
+}
+
+.card-title p {
+    max-height: 100px;
+}
+
+.park-printerov h1 {
+    color: rgb(224, 166, 6);
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
 /* Полоса прокрутки товаров */
 .product-slider {
     margin-top: 100px;
